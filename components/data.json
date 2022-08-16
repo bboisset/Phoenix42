@@ -1,0 +1,20 @@
+{
+    "user": {
+        "id": 2,
+        "weekly_logtime": "2h00",
+        "events": [
+            {
+                "id":"4",
+                "name": "Oklahoma whales",
+                "end_at": "2017-11-25T15:42:10.090Z"
+            },
+            {
+                "id":"5",
+                "name": "Oklahoma whales",
+                "end_at": "2017-11-25T15:42:10.090Z"
+            }
+        ],
+        
+        
+    }
+}

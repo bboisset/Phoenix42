@@ -1,0 +1,22 @@
+.ProgressCard {
+    width: 211px;
+    height: 211px;
+    justify-content: center;
+    row-gap: 8px;
+    position: relative;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 37px;
+}
+.subTitle {
+    color:#606060;
+}
+.progress {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+}
