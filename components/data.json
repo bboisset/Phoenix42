@@ -14,7 +14,11 @@
                 "end_at": "2017-11-25T15:42:10.090Z"
             }
         ],
-        
-        
+        "rules": {
+            "logtime": false,
+            "give_correction": true,
+            "receive_correction": true,
+            "events": true
+        }
     }
 }

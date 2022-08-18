@@ -1,0 +1,22 @@
+.menu {
+    padding: unset!important;
+    margin: unset!important;
+}
+.row {
+    display: flex;
+    column-gap: 8px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.row:hover {
+    background: #FFFFFF;
+    box-shadow: var(--shadow);
+}
+.separator {
+    margin: unset;
+    margin-bottom: 32px;
+}

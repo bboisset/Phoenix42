@@ -1,0 +1,17 @@
+.status {
+    width: 10px;
+    height: 10px;
+    background-color: #D90000;
+    border-radius: 100%;
+}
+.status.success {
+    background-color: #31BE00;
+}
+.status.error {
+    background-color: #D90000;
+}
+.statusCell {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}

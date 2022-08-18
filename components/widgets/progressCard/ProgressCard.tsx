@@ -7,11 +7,12 @@ import styles from "./ProgressCard.module.css";
 
 const ProgressCard = (props:ProgressCardProps) => {
     const { percentage, title, value, imageSrc, subTitle } = props;
-
+    const newPercentage = percentage * 0.782;
+    
     const genProgress = () => {
         return (
             <div className={styles.progress}>
-                <CircularProgress value={40} variant="determinate" className='progressCircle' thickness={2} style={{color:"#258F00"}}/>
+                <CircularProgress value={newPercentage} variant="determinate" className='progressCircle' thickness={2} style={{color:"#258F00"}}/>
             </div>
         );
     }
@@ -21,7 +22,7 @@ const ProgressCard = (props:ProgressCardProps) => {
             {genProgress()}
             <span>{title}</span>
             <span className={styles.value}>{value}</span>
-            <Image src={imageSrc} width={35} height={35} layout="fixed" />
+            <Image src={imageSrc} width={30} height={30} layout="fixed" />
             <span className={styles.subTitle}>{subTitle}</span>
         </div>
     );
