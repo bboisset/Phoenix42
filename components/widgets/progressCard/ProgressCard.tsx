@@ -1,18 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import {rules} from "../ruleTable/rules"
 import CircularProgress from '@mui/material/CircularProgress';
 
 import styles from "./ProgressCard.module.css";
 
+const keyToColor = {
+    low: "--danger",
+    medium: "--yellow",
+    high: "--success",
+}
+
 const ProgressCard = (props:ProgressCardProps) => {
-    const { percentage, title, value, imageSrc, subTitle } = props;
-    const newPercentage = percentage * 0.782;
+    const { percentage, title, value, imageSrc, subTitle, color } = props;
+    let newPercentage = percentage * 0.782;
+    newPercentage = newPercentage < 5 ? 5 : newPercentage;
     
+
     const genProgress = () => {
         return (
             <div className={styles.progress}>
-                <CircularProgress value={newPercentage} variant="determinate" className='progressCircle' thickness={2} style={{color:"#258F00"}}/>
+                <CircularProgress value={newPercentage} variant="determinate" className='progressCircle' thickness={2} style={{color:color}}/>
             </div>
         );
     }
@@ -34,6 +43,7 @@ interface ProgressCardProps {
     value: string;
     imageSrc: string;
     subTitle: string;
+    color: string;
 }
 
 export default ProgressCard;
