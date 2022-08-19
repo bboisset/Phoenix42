@@ -16,11 +16,11 @@ const RuleTable = (props: RuleTableProps) => {
 	}
 
 	return (
-		<Table sx={{ minWidth: 650 }} aria-label="simple table" className='card'>
+		<Table sx={{ minWidth: 650 }} aria-label="simple table" className={styles.table}>
 			<TableHead>
 				<TableRow>
 					<TableCell>Rappel des règles</TableCell>
-					<TableCell>Status</TableCell>
+					<TableCell style={{minWidth:150}}>Status</TableCell>
 				</TableRow>
 			</TableHead>
 			<TableBody>
@@ -30,8 +30,8 @@ const RuleTable = (props: RuleTableProps) => {
 					const text = isDone ? 'Réalisée' : 'Non réalisée';
 					return (
 						<TableRow key={index} className={styles.statusRow}>
-							<TableCell>{rule.content}</TableCell>
-							<TableCell>
+							<TableCell sx={{height:80}}>{rule.content}</TableCell>
+							<TableCell align="center">
 								<div className={styles.statusCell}>
 									<div className={`${styles.status} ${styles[color]}`}></div>
 									{text}

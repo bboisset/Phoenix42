@@ -10,7 +10,9 @@ const Menu = () => {
         <ul className={styles.menu}>
             {menuConfig.map((menuItem, index) => {
                 if (menuItem?.type === 'separator') return (<hr className={styles.separator}/>);
-                return (<MenuRow key={index} icon={menuItem.icon} name={menuItem.name} value={menuItem.name} />);
+                const url = menuItem?.value || "/";
+                console.log(url);
+                return (<MenuRow key={index} icon={menuItem.icon} name={menuItem.name} value={menuItem.value} />);
             })}
         </ul>
     );

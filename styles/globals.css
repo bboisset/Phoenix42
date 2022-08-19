@@ -32,7 +32,7 @@ span {
   padding: 1em;
 }
 span.MuiBadge-badge {
-  color: white;
+  color: white!important;
 }
 
 .progressCircle {
@@ -54,6 +54,10 @@ span.MuiBadge-badge {
   flex: 1 1;
   margin: 0px 32px;
   max-width: 1000px;
+}
+
+.content > .widget-container {
+  margin-bottom: 1em;
 }
 
 @media (prefers-color-scheme: dark) {
