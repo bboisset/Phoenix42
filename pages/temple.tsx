@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 const Dashboard: NextPage = () => {
 	
 	return (
-		<Layout>
+		<Layout activeMenu='/temple'>
 		</Layout>
 	)
 }

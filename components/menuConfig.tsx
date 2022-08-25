@@ -1,4 +1,4 @@
-export const menuConfig = [
+export const menuConfig:menu = [
     {
         icon: '/icons/dashboard.svg',
         name: 'Dashboard',
@@ -22,4 +22,4 @@ export const menuConfig = [
         name: 'Préférences',
         value: '/settings'
     }
-]
+];

@@ -5,13 +5,14 @@ import Menu from './partials/menu/Menu';
 import styles from "../styles/Layout.module.css";
 
 const Layout = (props:LayoutProps) => {
-    const {children, style, contentStyle} = props;
+    const {children, style, contentStyle, activeMenu} = props;
 
+    console.log(`rendering layout`);
     return (
         <div id="layout" style={style}>
             <TopBar />
             <div id={styles.container}>
-                <Menu />
+                <Menu activeMenu={activeMenu}/>
                 <div className="content" style={contentStyle}>
                     {children}
                 </div>
@@ -24,6 +25,7 @@ interface LayoutProps {
     children: React.ReactNode;
     style?: React.CSSProperties;
     contentStyle?: React.CSSProperties;
+    activeMenu: menuValues;
 }
 
 export default Layout;

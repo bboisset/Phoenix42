@@ -12,11 +12,19 @@
     cursor: pointer;
     transition-duration: 0.3s;
 }
-.row:hover {
+.row.active {
     background: #FFFFFF;
     box-shadow: var(--shadow);
 }
 .separator {
     margin: unset;
     margin-bottom: 32px;
+}
+@media only screen and (max-width: 1024px) {
+    .menu a span:last-child {
+        display: none;
+    }
+    .menu .row {
+        padding: 16px 16px;
+    }
 }

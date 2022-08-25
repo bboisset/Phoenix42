@@ -1,0 +1,27 @@
+.profilCard {
+    display:flex;
+    flex-direction: row;
+    padding: 32px;
+    justify-content: center;
+    column-gap: 48px;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+}
+.options > span {
+    font-size: 21px;
+    margin-bottom: 0.8em;
+    color: #333;
+}
+.avatar > span {
+    border: 5px solid #CE8D4C!important;
+    border-radius: 50%;
+}
+.options label {
+    width: 400px;
+    align-items: left!important;
+}
+.options label span:last-child {
+    color: #606060;
+}

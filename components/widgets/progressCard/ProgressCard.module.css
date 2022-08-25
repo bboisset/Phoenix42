@@ -11,8 +11,10 @@
     font-size: 37px;
 }
 .subTitle {
-    color:#606060;
+    color: #606060;
     font-size: 14px;
+    position: absolute;
+    bottom: 8px;
 }
 .progress {
     position: absolute;
@@ -23,4 +25,18 @@
     background-image: url("/icons/clock-back.svg");
     background-repeat: no-repeat;
     background-size: 100%;
+}
+.options {
+    position: absolute;
+    right: 28px;
+    bottom: 8px;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+.moreIcon {
+    font-size: 18px;
 }

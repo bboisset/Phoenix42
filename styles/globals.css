@@ -34,7 +34,11 @@ span {
 span.MuiBadge-badge {
   color: white!important;
 }
-
+div#notification-popover .MuiPaper-root {
+  background: #F2EFE8;
+  padding: 8px;
+  max-width: 360px;
+}
 .progressCircle {
   width: 100%!important;
   height: 100%!important;
@@ -52,12 +56,21 @@ span.MuiBadge-badge {
 }
 .content {
   flex: 1 1;
-  margin: 0px 32px;
   max-width: 1000px;
+  margin: auto;
 }
 
 .content > .widget-container {
   margin-bottom: 1em;
+}
+.MuiTooltip-tooltip {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    margin: 0px 16px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
