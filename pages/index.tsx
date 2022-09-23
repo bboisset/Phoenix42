@@ -1,9 +1,19 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import {useRouter} from 'next/router'
+import {getAccessToken} from '../components/modules/42utils/token'
+
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+	const router = useRouter();
+	const token = router.query?.code;
+
+	if (token) {
+		getAccessToken(token as string);
+		//router.push('/dashboard');
+	}
 
 	const genSiteLogo = () => {
 		return (
@@ -16,7 +26,7 @@ const Home: NextPage = () => {
 
 	const genLogin = () => {
 		return (
-			<a href="/dashboard">
+			<a href="https://api.intra.42.fr/oauth/authorize?client_id=7979f5a197e2d3ccf1f4b6e55abd6bb48e123040c4ad80428fc73d6c07250c94&redirect_uri=http%3A%2F%2Flocalhost%3A3000&response_type=code">
 				<div className={styles.login}>
 					<span>Se connecter</span>
 				</div>

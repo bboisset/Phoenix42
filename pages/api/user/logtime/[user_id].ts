@@ -17,6 +17,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return;
     }
 
+    export const getUserLogTime = () => {
+        const response = await fetch(`/v2/users/xlogin/locations_stats`
+    }
+
     let data42:User42LogTime = {
         "2022-08-26": "02:56:21.097917",
         "2022-08-25": "02:20:35.738681",
