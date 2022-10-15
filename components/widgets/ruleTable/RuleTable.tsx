@@ -28,7 +28,7 @@ const RuleTable = (props: RuleTableProps) => {
 					{rules.map((rule: rule, index: number) => {
 						const isDone = isRuleDone(rule.id);
 						const color = isDone ? 'success' : 'error';
-						const text = isDone ? 'Réalisée' : 'Non réalisée';
+						const text = isDone ? 'Validé' : 'Non validé';
 						return (
 							<TableRow key={index} className={styles.statusRow}>
 								<TableCell sx={{height:80}}>{rule.content}</TableCell>

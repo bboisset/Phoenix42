@@ -53,7 +53,7 @@ const NotificationPopOver = (props:NotificationPopOverProps) => {
             onClose={onClose}
         >
             <span className={styles.title}>Notifications</span>
-            <hr/>
+            <hr style={{color:"#D9D9D9",borderStyle:'solid',width:'70%'}}/>
             {genNotifications()}
         </Popover>
     );

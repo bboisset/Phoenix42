@@ -2,3 +2,11 @@
     display: flex;
     margin-top: 32px;
 }
+#footer {
+	text-align: center;
+	height: 25px;
+	margin-bottom: 4px;
+}
+#footer span {
+	font-size: 14px;
+}

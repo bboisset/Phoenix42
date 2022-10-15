@@ -1,6 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import siteLogo from '../public/logo.svg'
+import Link from 'next/link'
+
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -8,7 +11,7 @@ const Home: NextPage = () => {
 	const genSiteLogo = () => {
 		return (
 			<div className={styles.logo}>
-				<Image src="/logo.svg" width={100} height={100} layout="fixed" />
+				<Image src={siteLogo} width={100} height={100} layout="fixed" alt="Logo du site Phoenix 42"/>
 				<span className={styles.siteTitle}>Phoenix</span>
 			</div>
 		)
@@ -16,11 +19,11 @@ const Home: NextPage = () => {
 
 	const genLogin = () => {
 		return (
-			<a href="/dashboard">
+			<Link href="/dashboard">
 				<div className={styles.login}>
 					<span>Se connecter</span>
 				</div>
-			</a>
+			</Link>
 		)
 	}
 
@@ -33,7 +36,7 @@ const Home: NextPage = () => {
 
 			<main className={styles.main}>
 				{genSiteLogo()}
-				<span className={styles.help}>Pour continuer, connectez-vous via l'intra</span>
+				<span className={styles.help}>Pour continuer, connectez-vous via l&apos;intra</span>
 				{genLogin()}
 			</main>
 		</div>

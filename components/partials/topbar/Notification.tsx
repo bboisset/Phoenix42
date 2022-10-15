@@ -23,7 +23,7 @@ const Notification = () => {
     }
 
     return (
-        <Badge badgeContent={notificationCount} color="error" invisible={notificationCount == 0}>
+        <Badge color="error" invisible={notificationCount == 0} variant="dot">
             <div onClick={handleOpen} className={styles.icon}>
                 <NotificationsNoneIcon/>
             </div>

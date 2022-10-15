@@ -30,6 +30,7 @@ span {
 
 #layout {
   padding: 1em;
+  min-height: calc(100vh - 25px - 4px);
 }
 span.MuiBadge-badge {
   color: white!important;
